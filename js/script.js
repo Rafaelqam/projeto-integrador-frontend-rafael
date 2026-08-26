@@ -1,0 +1,1 @@
+console.log("Catálogo de peças de computador carregado.");
