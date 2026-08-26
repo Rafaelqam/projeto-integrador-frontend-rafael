@@ -1,5 +1,4 @@
 ﻿# projeto-integrador-frontend-rafael
-# Projeto Integrador Frontend
 
 ## Catálogo de Peças de Computador
 
