@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿```html
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -23,7 +24,6 @@
         </div>
     </header>
 
-
     <!-- Conteúdo principal -->
     <main class="container">
 
@@ -45,7 +45,6 @@
             </ul>
 
         </section>
-
 
         <!-- Catálogo -->
         <section class="catalogo-section">
@@ -87,7 +86,6 @@
 
                 </article>
 
-
                 <!-- Placa de vídeo -->
                 <article class="card">
 
@@ -121,7 +119,6 @@
 
                 </article>
 
-
                 <!-- Memória RAM -->
                 <article class="card">
 
@@ -154,7 +151,6 @@
                     </div>
 
                 </article>
-
 
                 <!-- SSD -->
                 <article class="card">
@@ -192,7 +188,6 @@
             </div>
 
         </section>
-
 
         <!-- Tabela -->
         <section class="informacoes">
@@ -246,7 +241,6 @@
 
         </section>
 
-
         <!-- Link externo -->
         <section class="fonte">
 
@@ -266,13 +260,34 @@
 
         </section>
 
-
         <!-- Formulário -->
         <section class="contato">
 
             <h2>Solicite informações sobre uma peça</h2>
 
             <form>
+
+                <!-- Assunto da solicitação -->
+                <fieldset>
+                    <legend>Assunto da solicitação</legend>
+
+                    <div class="campo">
+                        <label for="assunto">
+                            Assunto
+                        </label>
+
+                        <input
+                            type="text"
+                            id="assunto"
+                            name="assunto"
+                            required
+                            minlength="5"
+                            maxlength="80"
+                            placeholder="Ex.: Dúvida sobre uma peça"
+                        >
+                    </div>
+
+                </fieldset>
 
                 <!-- Dados pessoais -->
                 <fieldset>
@@ -298,7 +313,6 @@
 
                         </div>
 
-
                         <div class="campo">
 
                             <label for="email">
@@ -315,7 +329,6 @@
 
                         </div>
 
-
                         <div class="campo">
 
                             <label for="telefone">
@@ -331,7 +344,6 @@
                             >
 
                         </div>
-
 
                         <div class="campo">
 
@@ -373,7 +385,6 @@
 
                 </fieldset>
 
-
                 <!-- Forma de contato -->
                 <fieldset>
 
@@ -400,7 +411,6 @@
 
                 </fieldset>
 
-
                 <!-- Mensagem -->
                 <fieldset>
 
@@ -420,7 +430,6 @@
 
                 </fieldset>
 
-
                 <button type="submit">
                     Enviar solicitação
                 </button>
@@ -431,7 +440,6 @@
 
     </main>
 
-
     <!-- Rodapé -->
     <footer class="rodape">
 
@@ -441,10 +449,10 @@
 
     </footer>
 
-
     <!-- JavaScript -->
     <script src="js/script.js"></script>
 
 </body>
 
 </html>
+```
