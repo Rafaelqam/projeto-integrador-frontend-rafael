@@ -75,3 +75,7 @@ O projeto está sendo desenvolvido de forma gradual, utilizando Git e GitHub par
 ## Status
 
 Projeto em desenvolvimento.
+
+## Avaliação
+1.Avaliador-Glauco 27/08/2026:
+Sintaxe boa e eficiente, imagens, textos e formularios tudo certo conforme ensinado nas aulas. CSS aparte bonito e clea. na parte do video faltou mais sources conforme pedido talvez por isso na minha maquina o video não funciono, mas de resto tudo ok
