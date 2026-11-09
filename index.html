@@ -3,793 +3,462 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="Catálogo de peças e componentes de computador"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Catálogo de Peças de Computador</title>
 
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <header class="cabecalho">
-
         <div class="container">
-
-            <h1>
-                Catálogo de Peças de Computador
-            </h1>
+            <h1>Catálogo de Peças de Computador</h1>
 
             <p>
-                Conheça alguns dos principais componentes
-                utilizados em computadores.
+                Encontre peças e componentes para montar ou melhorar seu computador.
             </p>
-
         </div>
-
     </header>
 
+    <main class="container">
 
-    <main>
+        <section class="apresentacao">
 
-        <!-- APRESENTAÇÃO -->
+            <h2>Peças disponíveis</h2>
 
-        <section
-            id="apresentacao"
-            class="secao"
-        >
+            <p>
+                Confira algumas das principais peças de computador disponíveis
+                em nosso catálogo.
+            </p>
 
-            <div class="container">
-
-                <h2>
-                    Sobre o catálogo
-                </h2>
-
-                <p>
-                    Este catálogo apresenta informações sobre
-                    diferentes peças de computador, facilitando
-                    a consulta e a comparação entre os componentes.
-                </p>
-
-            </div>
+            <ul>
+                <li>Processadores</li>
+                <li>Placas de vídeo</li>
+                <li>Memórias RAM</li>
+                <li>Armazenamento SSD</li>
+            </ul>
 
         </section>
 
+        <section class="catalogo-section">
 
-        <!-- FILTROS -->
+            <h2>Catálogo de produtos</h2>
 
-        <section
-            id="filtros"
-            class="secao"
-        >
+            <div class="catalogo">
 
-            <div class="container">
+                <article class="card">
 
-                <h2>
-                    Pesquisar peças
-                </h2>
-
-                <form id="form-filtros">
-
-                    <div class="campo">
-
-                        <label for="busca">
-                            Pesquisar:
-                        </label>
-
-                        <input
-                            type="search"
-                            id="busca"
-                            name="busca"
-                            placeholder="Digite o nome da peça"
-                        >
-
-                    </div>
-
-
-                    <div class="campo">
-
-                        <label for="categoria">
-                            Categoria:
-                        </label>
-
-                        <select
-                            id="categoria"
-                            name="categoria"
-                        >
-
-                            <option value="todas">
-                                Todas as categorias
-                            </option>
-
-                            <option value="processador">
-                                Processador
-                            </option>
-
-                            <option value="memoria">
-                                Memória RAM
-                            </option>
-
-                            <option value="placa-video">
-                                Placa de vídeo
-                            </option>
-
-                            <option value="ssd">
-                                SSD
-                            </option>
-
-                        </select>
-
-                    </div>
-
-
-                    <button type="submit">
-                        Filtrar
-                    </button>
-
-                </form>
-
-            </div>
-
-        </section>
-
-
-        <!-- CATÁLOGO -->
-
-        <section
-            id="catalogo"
-            class="secao"
-        >
-
-            <div class="container">
-
-                <h2>
-                    Peças disponíveis
-                </h2>
-
-
-                <div
-                    id="lista-pecas"
-                    class="catalogo-grid"
-                >
-
-                    <!-- PROCESSADOR -->
-
-                    <article
-                        class="card-peca"
-                        data-categoria="processador"
-                    >
-
+                    <div class="imagem-peca">
                         <img
                             src="assets/images/processador.jpg"
-                            alt="Processador de computador"
+                            alt="Processador AMD Ryzen 5 5600"
                         >
+                    </div>
 
-                        <div class="card-conteudo">
+                    <div class="card-conteudo">
 
-                            <h3>
-                                Processador
-                            </h3>
+                        <span class="categoria">
+                            Processador
+                        </span>
 
-                            <p>
-                                Componente responsável por executar
-                                instruções e realizar cálculos
-                                do computador.
-                            </p>
+                        <h3>AMD Ryzen 5 5600</h3>
 
-                            <p>
-                                <strong>
-                                    Categoria:
-                                </strong>
+                        <p>
+                            Processador de seis núcleos indicado para
+                            computadores domésticos e jogos.
+                        </p>
 
-                                Processador
-                            </p>
+                        <strong>R$ 799,90</strong>
 
-                        </div>
+                        <button type="button">
+                            Ver detalhes
+                        </button>
 
-                    </article>
+                    </div>
 
+                </article>
 
-                    <!-- MEMÓRIA -->
+                <article class="card">
 
-                    <article
-                        class="card-peca"
-                        data-categoria="memoria"
-                    >
-
-                        <img
-                            src="assets/images/memoria.jpg"
-                            alt="Memória RAM de computador"
-                        >
-
-                        <div class="card-conteudo">
-
-                            <h3>
-                                Memória RAM
-                            </h3>
-
-                            <p>
-                                Armazena temporariamente os dados
-                                utilizados pelos programas
-                                em execução.
-                            </p>
-
-                            <p>
-                                <strong>
-                                    Categoria:
-                                </strong>
-
-                                Memória RAM
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PLACA DE VÍDEO -->
-
-                    <article
-                        class="card-peca"
-                        data-categoria="placa-video"
-                    >
-
+                    <div class="imagem-peca">
                         <img
                             src="assets/images/placadevideo.jpg"
-                            alt="Placa de vídeo de computador"
+                            alt="Placa de vídeo GeForce RTX 4060"
                         >
+                    </div>
 
-                        <div class="card-conteudo">
+                    <div class="card-conteudo">
 
-                            <h3>
-                                Placa de vídeo
-                            </h3>
+                        <span class="categoria">
+                            Placa de vídeo
+                        </span>
 
-                            <p>
-                                Responsável pelo processamento
-                                e geração de imagens e gráficos.
-                            </p>
+                        <h3>GeForce RTX 4060</h3>
 
-                            <p>
-                                <strong>
-                                    Categoria:
-                                </strong>
+                        <p>
+                            Placa de vídeo indicada para jogos e aplicações
+                            que exigem maior desempenho gráfico.
+                        </p>
 
-                                Placa de vídeo
-                            </p>
+                        <strong>R$ 1.899,90</strong>
 
-                        </div>
+                        <button type="button">
+                            Ver detalhes
+                        </button>
 
-                    </article>
+                    </div>
 
+                </article>
 
-                    <!-- SSD -->
+                <article class="card">
 
-                    <article
-                        class="card-peca"
-                        data-categoria="ssd"
-                    >
+                    <div class="imagem-peca">
+                        <img
+                            src="assets/images/memoria.jpg"
+                            alt="Memória RAM Kingston Fury de 16 GB"
+                        >
+                    </div>
 
+                    <div class="card-conteudo">
+
+                        <span class="categoria">
+                            Memória RAM
+                        </span>
+
+                        <h3>Kingston Fury 16 GB</h3>
+
+                        <p>
+                            Memória RAM indicada para computadores de uso
+                            diário, estudos e jogos.
+                        </p>
+
+                        <strong>R$ 329,90</strong>
+
+                        <button type="button">
+                            Ver detalhes
+                        </button>
+
+                    </div>
+
+                </article>
+
+                <article class="card">
+
+                    <div class="imagem-peca">
                         <img
                             src="assets/images/ssd.jpg"
-                            alt="SSD para armazenamento de computador"
+                            alt="SSD Kingston NV2 de 1 TB"
                         >
+                    </div>
 
-                        <div class="card-conteudo">
+                    <div class="card-conteudo">
 
-                            <h3>
-                                SSD
-                            </h3>
+                        <span class="categoria">
+                            Armazenamento
+                        </span>
 
-                            <p>
-                                Dispositivo utilizado para
-                                armazenamento de arquivos
-                                e do sistema operacional.
-                            </p>
+                        <h3>Kingston NV2 1 TB</h3>
 
-                            <p>
-                                <strong>
-                                    Categoria:
-                                </strong>
+                        <p>
+                            SSD para armazenamento rápido de arquivos,
+                            programas e sistema operacional.
+                        </p>
 
-                                SSD
-                            </p>
+                        <strong>R$ 449,90</strong>
 
-                        </div>
+                        <button type="button">
+                            Ver detalhes
+                        </button>
 
-                    </article>
+                    </div>
 
-                </div>
+                </article>
 
+            </div>
 
-                <p
-                    id="mensagem-vazia"
-                    class="mensagem-vazia"
-                    hidden
+        </section>
+
+        <section class="informacoes">
+
+            <h2>Comparação de peças</h2>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Peça</th>
+                        <th>Categoria</th>
+                        <th>Preço</th>
+                        <th>Indicação</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>AMD Ryzen 5 5600</td>
+                        <td>Processador</td>
+                        <td>R$ 799,90</td>
+                        <td>Uso geral e jogos</td>
+                    </tr>
+
+                    <tr>
+                        <td>GeForce RTX 4060</td>
+                        <td>Placa de vídeo</td>
+                        <td>R$ 1.899,90</td>
+                        <td>Jogos</td>
+                    </tr>
+
+                    <tr>
+                        <td>Kingston Fury 16 GB</td>
+                        <td>Memória RAM</td>
+                        <td>R$ 329,90</td>
+                        <td>Uso geral e jogos</td>
+                    </tr>
+
+                    <tr>
+                        <td>Kingston NV2 1 TB</td>
+                        <td>SSD</td>
+                        <td>R$ 449,90</td>
+                        <td>Armazenamento</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+        <section class="video-section">
+
+            <h2>Vídeo sobre componentes de computador</h2>
+
+            <p>
+                Confira um vídeo relacionado aos componentes e ao funcionamento
+                de um computador.
+            </p>
+
+            <div class="video-container">
+
+                <iframe
+                    src="https://www.youtube.com/embed/VLWaexdfvdg"
+                    title="Vídeo sobre componentes de computador"
+                    width="560"
+                    height="315"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </section>
+
+        <section class="fonte">
+
+            <h2>Informações sobre hardware</h2>
+
+            <p>
+                Para conhecer mais sobre tecnologias de hardware,
+                consulte o
+                <a
+                    href="https://www.intel.com.br/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                 >
-                    Nenhuma peça encontrada.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================================================= -->
-        <!-- AULA 05 - SVG E CANVAS -->
-        <!-- ================================================= -->
-
-        <section
-            id="recursos-graficos"
-            class="secao"
-        >
-
-            <div class="container">
-
-                <h2>
-                    Recursos gráficos
-                </h2>
-
-                <p>
-                    Nesta seção são utilizados recursos gráficos
-                    do HTML5 aplicados ao tema de peças
-                    e componentes de computador.
-                </p>
-
-
-                <div class="graficos-grid">
-
-
-                    <!-- ============================== -->
-                    <!-- SVG -->
-                    <!-- ============================== -->
-
-                    <article class="grafico-card">
-
-                        <h3>
-                            SVG - Peças em destaque
-                        </h3>
-
-                        <p>
-                            Representação gráfica criada utilizando
-                            SVG.
-                        </p>
-
-
-                        <div class="svg-area">
-
-                            <svg
-                                viewBox="0 0 300 120"
-                                width="300"
-                                height="120"
-                                role="img"
-                                aria-labelledby="titulo-selo"
-                            >
-
-                                <title id="titulo-selo">
-                                    Selo de peças de computador
-                                    em destaque
-                                </title>
-
-
-                                <!-- FUNDO -->
-
-                                <rect
-                                    x="5"
-                                    y="5"
-                                    width="290"
-                                    height="110"
-                                    rx="15"
-                                    fill="#1f4e79"
-                                />
-
-
-                                <!-- CÍRCULO -->
-
-                                <circle
-                                    cx="55"
-                                    cy="60"
-                                    r="32"
-                                    fill="#ffffff"
-                                />
-
-
-                                <!-- ESTRELA -->
-
-                                <polygon
-                                    points="
-                                        55,35
-                                        62,51
-                                        80,53
-                                        66,64
-                                        70,82
-                                        55,72
-                                        40,82
-                                        44,64
-                                        30,53
-                                        48,51
-                                    "
-                                    fill="#ff8c00"
-                                />
-
-
-                                <!-- TEXTO -->
-
-                                <text
-                                    x="100"
-                                    y="55"
-                                    font-size="18"
-                                    fill="#ffffff"
-                                >
-                                    PEÇAS EM
-                                </text>
-
-
-                                <text
-                                    x="100"
-                                    y="80"
-                                    font-size="18"
-                                    fill="#ffffff"
-                                >
-                                    DESTAQUE
-                                </text>
-
-                            </svg>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- ============================== -->
-                    <!-- CANVAS -->
-                    <!-- ============================== -->
-
-                    <article class="grafico-card">
-
-                        <h3>
-                            Canvas - Teste com bolinhas
-                        </h3>
-
-                        <p>
-                            Animação de partículas criada
-                            utilizando Canvas e JavaScript.
-                        </p>
-
-
-                        <canvas
-                            id="canvas-bolinhas"
-                            width="420"
-                            height="250"
-                            role="img"
-                            aria-label="Animação de bolinhas representando partículas de um sistema de computador"
-                        >
-
-                            <p>
-                                Animação de bolinhas representando
-                                partículas em movimento.
-                            </p>
-
-                        </canvas>
-
-
-                        <p class="descricao-grafico">
-                            As bolinhas são desenhadas e atualizadas
-                            utilizando JavaScript.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
+                    site oficial da Intel
+                </a>.
+            </p>
 
         </section>
 
+        <section class="contato">
 
-        <!-- ================================================= -->
-        <!-- TABELA -->
-        <!-- ================================================= -->
+            <h2>Solicite informações sobre uma peça</h2>
 
-        <section
-            id="comparacao"
-            class="secao"
-        >
+            <form>
 
-            <div class="container">
+                <fieldset>
 
-                <h2>
-                    Comparação de componentes
-                </h2>
-
-
-                <div class="tabela-container">
-
-                    <table>
-
-                        <thead>
-
-                            <tr>
-
-                                <th>
-                                    Componente
-                                </th>
-
-                                <th>
-                                    Função principal
-                                </th>
-
-                                <th>
-                                    Tipo
-                                </th>
-
-                            </tr>
-
-                        </thead>
-
-
-                        <tbody>
-
-                            <tr>
-
-                                <td>
-                                    Processador
-                                </td>
-
-                                <td>
-                                    Executar instruções
-                                </td>
-
-                                <td>
-                                    Processamento
-                                </td>
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td>
-                                    Memória RAM
-                                </td>
-
-                                <td>
-                                    Armazenamento temporário
-                                </td>
-
-                                <td>
-                                    Memória
-                                </td>
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td>
-                                    Placa de vídeo
-                                </td>
-
-                                <td>
-                                    Processamento gráfico
-                                </td>
-
-                                <td>
-                                    Vídeo
-                                </td>
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td>
-                                    SSD
-                                </td>
-
-                                <td>
-                                    Armazenamento de dados
-                                </td>
-
-                                <td>
-                                    Armazenamento
-                                </td>
-
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================================================= -->
-        <!-- FORMULÁRIO -->
-        <!-- ================================================= -->
-
-        <section
-            id="formulario"
-            class="secao"
-        >
-
-            <div class="container">
-
-                <h2>
-                    Indique uma peça
-                </h2>
-
-                <p>
-                    Utilize o formulário para indicar uma peça
-                    que poderia fazer parte do catálogo.
-                </p>
-
-
-                <form id="form-peca">
-
+                    <legend>Assunto da solicitação</legend>
 
                     <div class="campo">
 
-                        <label for="nome-peca">
-                            Nome da peça:
+                        <label for="assunto">
+                            Assunto
                         </label>
 
                         <input
                             type="text"
-                            id="nome-peca"
-                            name="nome-peca"
+                            id="assunto"
+                            name="assunto"
                             required
+                            minlength="5"
+                            maxlength="80"
+                            placeholder="Ex.: Dúvida sobre uma peça"
                         >
 
                     </div>
 
+                </fieldset>
 
-                    <div class="campo">
+                <fieldset>
 
-                        <label for="tipo-peca">
-                            Categoria:
-                        </label>
+                    <legend>Dados pessoais</legend>
 
-                        <select
-                            id="tipo-peca"
-                            name="tipo-peca"
+                    <div class="formulario-grid">
+
+                        <div class="campo">
+
+                            <label for="nome">
+                                Nome completo
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nome"
+                                name="nome"
+                                required
+                                minlength="3"
+                                placeholder="Digite seu nome"
+                            >
+
+                        </div>
+
+                        <div class="campo">
+
+                            <label for="email">
+                                E-mail
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                placeholder="Digite seu e-mail"
+                            >
+
+                        </div>
+
+                        <div class="campo">
+
+                            <label for="telefone">
+                                Telefone
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="telefone"
+                                name="telefone"
+                                pattern="[0-9]{10,11}"
+                                placeholder="83999999999"
+                            >
+
+                        </div>
+
+                        <div class="campo">
+
+                            <label for="peca">
+                                Peça de interesse
+                            </label>
+
+                            <select
+                                id="peca"
+                                name="peca"
+                                required
+                            >
+
+                                <option value="">
+                                    Selecione uma peça
+                                </option>
+
+                                <option value="processador">
+                                    Processador
+                                </option>
+
+                                <option value="placa-video">
+                                    Placa de vídeo
+                                </option>
+
+                                <option value="memoria">
+                                    Memória RAM
+                                </option>
+
+                                <option value="ssd">
+                                    SSD
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Forma de contato</legend>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="contato"
+                            value="email"
                             required
                         >
+                        E-mail
+                    </label>
 
-                            <option value="">
-                                Selecione uma categoria
-                            </option>
+                    <label>
+                        <input
+                            type="radio"
+                            name="contato"
+                            value="telefone"
+                        >
+                        Telefone
+                    </label>
 
-                            <option value="processador">
-                                Processador
-                            </option>
+                </fieldset>
 
-                            <option value="memoria">
-                                Memória RAM
-                            </option>
+                <fieldset>
 
-                            <option value="placa-video">
-                                Placa de vídeo
-                            </option>
+                    <legend>Mensagem</legend>
 
-                            <option value="ssd">
-                                SSD
-                            </option>
+                    <label for="mensagem">
+                        Digite sua dúvida
+                    </label>
 
-                            <option value="outro">
-                                Outro
-                            </option>
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        rows="5"
+                        maxlength="300"
+                        placeholder="Digite sua mensagem..."
+                    ></textarea>
 
-                        </select>
+                </fieldset>
 
-                    </div>
+                <button type="submit">
+                    Enviar solicitação
+                </button>
 
-
-                    <div class="campo">
-
-                        <label for="descricao-peca">
-                            Descrição:
-                        </label>
-
-                        <textarea
-                            id="descricao-peca"
-                            name="descricao-peca"
-                            rows="5"
-                            required
-                        ></textarea>
-
-                    </div>
-
-
-                    <button type="submit">
-                        Enviar indicação
-                    </button>
-
-                </form>
-
-
-                <p
-                    id="mensagem-formulario"
-                    class="mensagem-formulario"
-                    role="status"
-                    aria-live="polite"
-                ></p>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================================================= -->
-        <!-- VÍDEO -->
-        <!-- ================================================= -->
-
-        <section
-            id="video"
-            class="secao"
-        >
-
-            <div class="container">
-
-                <h2>
-                    Vídeo sobre componentes de computador
-                </h2>
-
-
-                <div class="video-container">
-
-                    <iframe
-                        src="https://www.youtube.com/embed/VLWaexdfvdg"
-                        title="Vídeo sobre componentes de computador"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen
-                    ></iframe>
-
-                </div>
-
-            </div>
+            </form>
 
         </section>
 
     </main>
 
-
-    <!-- RODAPÉ -->
-
     <footer class="rodape">
 
-        <div class="container">
-
-            <p>
-                Catálogo de Peças de Computador
-            </p>
-
-            <p>
-                Projeto desenvolvido para atividade acadêmica.
-            </p>
-
-        </div>
+        <p>
+            &copy; 2026 Catálogo de Peças de Computador
+        </p>
 
     </footer>
-
-
-    <!-- JAVASCRIPT -->
 
     <script src="js/script.js"></script>
 
