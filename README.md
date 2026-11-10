@@ -18,12 +18,13 @@ Desenvolver uma página web organizada e semântica, aplicando conhecimentos de 
 * Git
 * GitHub
 
-## Peças disponíveis
-
-* Processador AMD Ryzen 5 5600
-* Placa de vídeo GeForce RTX 4060
-* Memória RAM Kingston Fury 16 GB
-* SSD Kingston NV2 1 TB
+## Peças Disponíveis no Catálogo
+- Processador Intel Core i7
+- Placa de Vídeo RTX 3060
+- Memória RAM 16GB
+- SSD NVMe 1TB
+- Fonte 650W Corsair
+- Placa Mãe B550
 
 ## Funcionalidades
 
