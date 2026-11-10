@@ -16,7 +16,6 @@
     <header class="cabecalho">
         <div class="container">
             <h1>Catálogo de Peças de Computador</h1>
-
             <p>
                 Encontre peças e componentes para montar ou melhorar seu computador.
             </p>
@@ -26,41 +25,39 @@
     <main class="container">
 
         <section class="apresentacao">
-
             <h2>Peças disponíveis</h2>
-
             <p>
                 Confira algumas das principais peças de computador disponíveis
                 em nosso catálogo.
             </p>
-
             <ul>
                 <li>Processadores</li>
                 <li>Placas de vídeo</li>
                 <li>Memórias RAM</li>
                 <li>Armazenamento SSD</li>
             </ul>
-
         </section>
 
         <section class="catalogo-section">
-
             <h2>Catálogo de produtos</h2>
-
             <p id="mensagem-vazia" hidden>Nenhuma peça encontrada.</p>
-
             <div class="catalogo" id="container-cards">
-                <!-- O JavaScript da Aula 09 vai injetar os cards das peças automaticamente aqui dentro -->
+                <!-- Cards renderizados dinamicamente pelo JS -->
             </div>
+        </section>
 
+        <!-- NOVO: Seção do Carrinho de Compras -->
+        <section class="carrinho-section" style="background: #f4f4f4; padding: 20px; border-radius: 8px; margin-bottom: 40px;">
+            <h2>Carrinho de Compras</h2>
+            <div id="itens-carrinho" style="margin-bottom: 20px; background: white; padding: 15px; border-radius: 5px;">
+                <p>O carrinho está vazio.</p>
+            </div>
+            <p style="font-size: 1.2rem; text-align: right;"><strong>Total: R$ <span id="total-carrinho">0.00</span></strong></p>
         </section>
 
         <section class="informacoes">
-
             <h2>Comparação de peças</h2>
-
             <table>
-
                 <thead>
                     <tr>
                         <th>Peça</th>
@@ -69,54 +66,42 @@
                         <th>Indicação</th>
                     </tr>
                 </thead>
-
                 <tbody>
-
                     <tr>
                         <td>AMD Ryzen 5 5600</td>
                         <td>Processador</td>
                         <td>R$ 799,90</td>
                         <td>Uso geral e jogos</td>
                     </tr>
-
                     <tr>
                         <td>GeForce RTX 4060</td>
                         <td>Placa de vídeo</td>
                         <td>R$ 1.899,90</td>
                         <td>Jogos</td>
                     </tr>
-
                     <tr>
                         <td>Kingston Fury 16 GB</td>
                         <td>Memória RAM</td>
                         <td>R$ 329,90</td>
                         <td>Uso geral e jogos</td>
                     </tr>
-
                     <tr>
                         <td>Kingston NV2 1 TB</td>
                         <td>SSD</td>
                         <td>R$ 449,90</td>
                         <td>Armazenamento</td>
                     </tr>
-
                 </tbody>
-
             </table>
-
         </section>
 
         <section class="video-section">
-
             <h2>Vídeo sobre componentes de computador</h2>
-
             <p>
                 Confira um vídeo relacionado aos componentes e ao funcionamento
                 de um computador.
             </p>
-
             <div class="video-container">
-
                 <iframe
                     src="https://www.youtube.com/embed/VLWaexdfvdg"
                     title="Vídeo sobre componentes de computador"
@@ -125,213 +110,74 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
-
             </div>
-
         </section>
 
         <section class="fonte">
-
             <h2>Informações sobre hardware</h2>
-
             <p>
                 Para conhecer mais sobre tecnologias de hardware,
                 consulte o
-                <a
-                    href="https://www.intel.com.br/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    site oficial da Intel
-                </a>.
+                <a href="https://www.intel.com.br/" target="_blank" rel="noopener noreferrer">site oficial da Intel</a>.
             </p>
-
         </section>
 
         <section class="contato">
-
             <h2>Solicite informações sobre uma peça</h2>
-
-            <form>
-
+            <form id="form-peca">
                 <fieldset>
-
                     <legend>Assunto da solicitação</legend>
-
                     <div class="campo">
-
-                        <label for="assunto">
-                            Assunto
-                        </label>
-
-                        <input
-                            type="text"
-                            id="assunto"
-                            name="assunto"
-                            required
-                            minlength="5"
-                            maxlength="80"
-                            placeholder="Ex.: Dúvida sobre uma peça"
-                        >
-
+                        <label for="assunto">Assunto</label>
+                        <input type="text" id="assunto" name="assunto" required minlength="5" maxlength="80" placeholder="Ex.: Dúvida sobre uma peça">
                     </div>
-
                 </fieldset>
-
                 <fieldset>
-
                     <legend>Dados pessoais</legend>
-
                     <div class="formulario-grid">
-
                         <div class="campo">
-
-                            <label for="nome">
-                                Nome completo
-                            </label>
-
-                            <input
-                                type="text"
-                                id="nome"
-                                name="nome"
-                                required
-                                minlength="3"
-                                placeholder="Digite seu nome"
-                            >
-
+                            <label for="nome-peca">Nome completo</label>
+                            <input type="text" id="nome-peca" name="nome" required minlength="3" placeholder="Digite seu nome">
                         </div>
-
                         <div class="campo">
-
-                            <label for="email">
-                                E-mail
-                            </label>
-
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                required
-                                placeholder="Digite seu e-mail"
-                            >
-
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
                         </div>
-
                         <div class="campo">
-
-                            <label for="telefone">
-                                Telefone
-                            </label>
-
-                            <input
-                                type="tel"
-                                id="telefone"
-                                name="telefone"
-                                pattern="[0-9]{10,11}"
-                                placeholder="83999999999"
-                            >
-
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10,11}" placeholder="83999999999">
                         </div>
-
                         <div class="campo">
-
-                            <label for="peca">
-                                Peça de interesse
-                            </label>
-
-                            <select
-                                id="peca"
-                                name="peca"
-                                required
-                            >
-
-                                <option value="">
-                                    Selecione uma peça
-                                </option>
-
-                                <option value="processador">
-                                    Processador
-                                </option>
-
-                                <option value="placa-video">
-                                    Placa de vídeo
-                                </option>
-
-                                <option value="memoria">
-                                    Memória RAM
-                                </option>
-
-                                <option value="ssd">
-                                    SSD
-                                </option>
-
+                            <label for="tipo-peca">Peça de interesse</label>
+                            <select id="tipo-peca" name="peca" required>
+                                <option value="">Selecione uma peça</option>
+                                <option value="processador">Processador</option>
+                                <option value="placa-video">Placa de vídeo</option>
+                                <option value="memoria">Memória RAM</option>
+                                <option value="ssd">SSD</option>
                             </select>
-
                         </div>
-
                     </div>
-
                 </fieldset>
-
                 <fieldset>
-
                     <legend>Forma de contato</legend>
-
-                    <label>
-                        <input
-                            type="radio"
-                            name="contato"
-                            value="email"
-                            required
-                        >
-                        E-mail
-                    </label>
-
-                    <label>
-                        <input
-                            type="radio"
-                            name="contato"
-                            value="telefone"
-                        >
-                        Telefone
-                    </label>
-
+                    <label><input type="radio" name="contato" value="email" required> E-mail</label>
+                    <label><input type="radio" name="contato" value="telefone"> Telefone</label>
                 </fieldset>
-
                 <fieldset>
-
                     <legend>Mensagem</legend>
-
-                    <label for="mensagem">
-                        Digite sua dúvida
-                    </label>
-
-                    <textarea
-                        id="mensagem"
-                        name="mensagem"
-                        rows="5"
-                        maxlength="300"
-                        placeholder="Digite sua mensagem..."
-                    ></textarea>
-
+                    <label for="descricao-peca">Digite sua dúvida</label>
+                    <textarea id="descricao-peca" name="mensagem" rows="5" maxlength="300" placeholder="Digite sua mensagem..."></textarea>
                 </fieldset>
-
-                <button type="submit">
-                    Enviar solicitação
-                </button>
-
+                <p id="mensagem-formulario" style="font-weight: bold; color: #2e75b6;"></p>
+                <button type="submit">Enviar solicitação</button>
             </form>
-
         </section>
 
     </main>
 
     <footer class="rodape">
-
-        <p>
-            &copy; 2026 Catálogo de Peças de Computador
-        </p>
-
+        <p>&copy; 2026 Catálogo de Peças de Computador</p>
     </footer>
 
     <script src="js/script.js"></script>
