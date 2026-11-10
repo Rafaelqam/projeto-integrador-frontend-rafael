@@ -9,16 +9,48 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- CSS DO TEMA ESCURO -->
+    <style>
+        body.tema-escuro {
+            background-color: #121212;
+            color: #f4f4f4;
+        }
+        body.tema-escuro .cabecalho, 
+        body.tema-escuro .rodape {
+            background-color: #0d0d0d;
+        }
+        body.tema-escuro .carrinho-section, 
+        body.tema-escuro #itens-carrinho,
+        body.tema-escuro table,
+        body.tema-escuro th,
+        body.tema-escuro td,
+        body.tema-escuro input,
+        body.tema-escuro select,
+        body.tema-escuro textarea {
+            background-color: #1e1e1e !important;
+            color: #f4f4f4 !important;
+            border-color: #333 !important;
+        }
+        body.tema-escuro .card-peca {
+            background-color: #1e1e1e;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        }
+    </style>
 </head>
 
 <body>
 
     <header class="cabecalho">
-        <div class="container">
-            <h1>Catálogo de Peças de Computador</h1>
-            <p>
-                Encontre peças e componentes para montar ou melhorar seu computador.
-            </p>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+            <div>
+                <h1>Catálogo de Peças</h1>
+                <p>Encontre peças e componentes para seu computador.</p>
+            </div>
+            <!-- BOTÃO DO TEMA -->
+            <button id="btn-tema" style="padding: 10px 15px; background: #333; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                🌙 Modo Escuro
+            </button>
         </div>
     </header>
 
@@ -26,16 +58,7 @@
 
         <section class="apresentacao">
             <h2>Peças disponíveis</h2>
-            <p>
-                Confira algumas das principais peças de computador disponíveis
-                em nosso catálogo.
-            </p>
-            <ul>
-                <li>Processadores</li>
-                <li>Placas de vídeo</li>
-                <li>Memórias RAM</li>
-                <li>Armazenamento SSD</li>
-            </ul>
+            <p>Confira algumas das principais peças de computador disponíveis em nosso catálogo.</p>
         </section>
 
         <section class="catalogo-section">
@@ -46,7 +69,6 @@
             </div>
         </section>
 
-        <!-- NOVO: Seção do Carrinho de Compras -->
         <section class="carrinho-section" style="background: #f4f4f4; padding: 20px; border-radius: 8px; margin-bottom: 40px;">
             <h2>Carrinho de Compras</h2>
             <div id="itens-carrinho" style="margin-bottom: 20px; background: white; padding: 15px; border-radius: 5px;">
@@ -80,12 +102,6 @@
                         <td>Jogos</td>
                     </tr>
                     <tr>
-                        <td>Kingston Fury 16 GB</td>
-                        <td>Memória RAM</td>
-                        <td>R$ 329,90</td>
-                        <td>Uso geral e jogos</td>
-                    </tr>
-                    <tr>
                         <td>Kingston NV2 1 TB</td>
                         <td>SSD</td>
                         <td>R$ 449,90</td>
@@ -95,43 +111,9 @@
             </table>
         </section>
 
-        <section class="video-section">
-            <h2>Vídeo sobre componentes de computador</h2>
-            <p>
-                Confira um vídeo relacionado aos componentes e ao funcionamento
-                de um computador.
-            </p>
-            <div class="video-container">
-                <iframe
-                    src="https://www.youtube.com/embed/VLWaexdfvdg"
-                    title="Vídeo sobre componentes de computador"
-                    width="560"
-                    height="315"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </section>
-
-        <section class="fonte">
-            <h2>Informações sobre hardware</h2>
-            <p>
-                Para conhecer mais sobre tecnologias de hardware,
-                consulte o
-                <a href="https://www.intel.com.br/" target="_blank" rel="noopener noreferrer">site oficial da Intel</a>.
-            </p>
-        </section>
-
         <section class="contato">
             <h2>Solicite informações sobre uma peça</h2>
             <form id="form-peca">
-                <fieldset>
-                    <legend>Assunto da solicitação</legend>
-                    <div class="campo">
-                        <label for="assunto">Assunto</label>
-                        <input type="text" id="assunto" name="assunto" required minlength="5" maxlength="80" placeholder="Ex.: Dúvida sobre uma peça">
-                    </div>
-                </fieldset>
                 <fieldset>
                     <legend>Dados pessoais</legend>
                     <div class="formulario-grid">
@@ -144,25 +126,14 @@
                             <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
                         </div>
                         <div class="campo">
-                            <label for="telefone">Telefone</label>
-                            <input type="tel" id="telefone" name="telefone" pattern="[0-9]{10,11}" placeholder="83999999999">
-                        </div>
-                        <div class="campo">
                             <label for="tipo-peca">Peça de interesse</label>
                             <select id="tipo-peca" name="peca" required>
                                 <option value="">Selecione uma peça</option>
                                 <option value="processador">Processador</option>
                                 <option value="placa-video">Placa de vídeo</option>
-                                <option value="memoria">Memória RAM</option>
-                                <option value="ssd">SSD</option>
                             </select>
                         </div>
                     </div>
-                </fieldset>
-                <fieldset>
-                    <legend>Forma de contato</legend>
-                    <label><input type="radio" name="contato" value="email" required> E-mail</label>
-                    <label><input type="radio" name="contato" value="telefone"> Telefone</label>
                 </fieldset>
                 <fieldset>
                     <legend>Mensagem</legend>
@@ -183,5 +154,4 @@
     <script src="js/script.js"></script>
 
 </body>
-
 </html>

@@ -28,9 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
         containerCards.innerHTML = "";
 
         if (pecas.length === 0) {
-            mensagemVazia.hidden = false;
+            if(mensagemVazia) mensagemVazia.hidden = false;
         } else {
-            mensagemVazia.hidden = true;
+            if(mensagemVazia) mensagemVazia.hidden = true;
             
             pecas.forEach(function (peca) {
                 const card = document.createElement("div");
@@ -117,8 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
     renderizarPecas(catalogoPecas);
 
     function filtrarPecas() {
-        const textoBusca = campoBusca.value.toLowerCase().trim();
-        const categoriaSelecionada = campoCategoria.value;
+        const textoBusca = campoBusca ? campoBusca.value.toLowerCase().trim() : "";
+        const categoriaSelecionada = campoCategoria ? campoCategoria.value : "todas";
 
         const pecasFiltradas = catalogoPecas.filter(function (peca) {
             const correspondeBusca = peca.nome.toLowerCase().includes(textoBusca);
@@ -165,56 +165,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /* ==========================================
-       CANVAS - TESTE COM BOLINHAS
+       AULA 11 - FUNÇÃO E DOM BÁSICO (Modo Escuro)
        ========================================== */
-    const canvas = document.getElementById("canvas-bolinhas");
-
-    if (canvas) {
-        const ctx = canvas.getContext("2d");
-        const bolinhas = [];
-        const quantidadeBolinhas = 20;
-
-        for (let i = 0; i < quantidadeBolinhas; i++) {
-            bolinhas.push({
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height,
-                raio: 5 + Math.random() * 7,
-                velocidadeX: (Math.random() - 0.5) * 2,
-                velocidadeY: (Math.random() - 0.5) * 2
-            });
-        }
-
-        function desenharBolinhas() {
-            bolinhas.forEach(function (bolinha) {
-                ctx.beginPath();
-                ctx.arc(bolinha.x, bolinha.y, bolinha.raio, 0, Math.PI * 2);
-                ctx.fillStyle = "#2e75b6";
-                ctx.fill();
-            });
-        }
-
-        function atualizarBolinhas() {
-            bolinhas.forEach(function (bolinha) {
-                bolinha.x += bolinha.velocidadeX;
-                bolinha.y += bolinha.velocidadeY;
-
-                if (bolinha.x - bolinha.raio <= 0 || bolinha.x + bolinha.raio >= canvas.width) {
-                    bolinha.velocidadeX *= -1;
-                }
-                if (bolinha.y - bolinha.raio <= 0 || bolinha.y + bolinha.raio >= canvas.height) {
-                    bolinha.velocidadeY *= -1;
-                }
-            });
-        }
-
-        function animar() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            atualizarBolinhas();
-            desenharBolinhas();
-            requestAnimationFrame(animar);
-        }
-
-        animar();
+    const btnTema = document.getElementById("btn-tema");
+    
+    if (btnTema) {
+        // Função atrelada ao evento de clique no botão (Manipulação de DOM)
+        btnTema.addEventListener("click", function() {
+            // Alterna a classe 'tema-escuro' no body da página
+            document.body.classList.toggle("tema-escuro");
+            
+            // Muda o texto do botão dependendo do estado do body
+            if (document.body.classList.contains("tema-escuro")) {
+                btnTema.textContent = "☀️ Modo Claro";
+                btnTema.style.background = "#f4f4f4";
+                btnTema.style.color = "#333";
+            } else {
+                btnTema.textContent = "🌙 Modo Escuro";
+                btnTema.style.background = "#333";
+                btnTema.style.color = "white";
+            }
+        });
     }
 
 });
