@@ -37,29 +37,6 @@ Desenvolver uma página web organizada e semântica, aplicando conhecimentos de 
 * Validação dos campos do formulário
 * Estrutura HTML semântica
 
-## Estrutura do projeto
-
-```text
-projeto-integrador-frontend-rafael/
-│
-├── assets/
-│   └── images/
-│       ├── memoria.jpg
-│       ├── placadevideo.jpg
-│       ├── processador.jpg
-│       └── ssd.jpg
-│
-├── css/
-│   └── style.css
-│
-├── js/
-│   └── script.js
-│
-├── index.html
-├── README.md
-└── .gitignore
-```
-
 ## Como executar
 
 1. Baixe ou clone o repositório.
